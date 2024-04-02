@@ -1,0 +1,368 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  background-image: url(images/IMG_0156-fotor-bg-remover-2024021015541.png);
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+}
+
+nav {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+
+#title {
+  font-size: 60px;
+  margin-left: 50px;
+  font-weight: 900;
+  letter-spacing: 5px;
+}
+
+#title a {
+  text-decoration: none;
+  color: white;
+}
+
+.color-red {
+  color: red;
+}
+
+.nav-list li {
+  display: inline-block;
+  list-style-type: none;
+  margin: 10px 30px;
+  font-size: 20px;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+}
+
+.nav-list li a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  position: absolute;
+  left: 0;
+  top: 20px;
+  background: red;
+  transition: 0.5s;
+}
+
+.nav-list li a:hover::after {
+  width: 100%;
+}
+
+#introduction {
+  margin: 15%;
+  font-size: 70px;
+  font-weight: 800;
+}
+
+#about {
+  padding: 80px 10%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#about-image {
+  width: 300px;
+  height: max-content;
+  border-radius: 50%;
+  flex-basis: 35%;
+}
+
+#about-info {
+  flex-basis: 60%;
+}
+
+.about-title {
+  font-size: 70px;
+}
+
+.about-description {
+  font-size: 25px;
+  margin: 20px auto auto auto;
+}
+
+#tabs-titles button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  margin: 40px;
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#tabs-titles button::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  position: absolute;
+  left: 0;
+  top: 23px;
+  background: red;
+  transition: 0.5s;
+}
+
+#tabs-titles button:hover::after {
+  width: 100%;
+}
+
+#tabs-titles button.active::after {
+  width: 100%;
+}
+
+#skills ul li,
+#education ul li {
+  font-size: 20px;
+  margin-bottom: 20px;
+  cursor: default;
+  list-style-type: none;
+  margin-left: 15px;
+}
+
+#skills ul li {
+  list-style-type: decimal;
+}
+
+#skills ul li:hover::after {
+  content: "Intermediate";
+  color: red;
+  margin-left: 30px;
+}
+
+#education {
+  display: none;
+}
+
+#skills p,
+#education p {
+  margin-top: 3px;
+}
+
+#services {
+  padding: 30px 10%;
+}
+
+.services-title {
+  margin-bottom: 30px;
+  font-size: 70px;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
+  margin-bottom: 2.5em;
+}
+
+.services-list div {
+  background-color: #262626;
+  padding: 40px;
+  font-size: 13px;
+  font-weight: 300;
+  border-radius: 10px;
+  transition: background-color 0.5s, transform 0.5s;
+}
+
+.services-list div:hover {
+  background-color: blue;
+  transform: translateY(-10px);
+}
+
+.services-list i {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.services-list h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.services-list p {
+  font-size: 20px;
+}
+
+#projects {
+  padding: 30px 10%;
+}
+
+.projects-title {
+  margin-bottom: 80px;
+  font-size: 70px;
+  text-align: center;
+}
+
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
+}
+
+.project {
+  overflow: hidden;
+  position: relative;
+}
+
+.layer {
+  width: 100%;
+  height: 0;
+  border-radius: 5%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), #262626);
+  transition: height 0.5s;
+}
+
+.layer p {
+  margin: 25px 0 40px 0;
+}
+
+.layer a {
+  background-color: aliceblue;
+  border-radius: 100%;
+  width: 10%;
+  margin-left: 14em;
+  padding: 10px;
+}
+
+.project:hover .layer {
+  height: 100%;
+}
+
+.project img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5%;
+  display: block;
+}
+
+.git-button {
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 70px 0 100px 0;
+}
+
+.git-button a {
+  border: 2px solid darkslategray;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.git-button a:hover {
+  background-color: darkslategray;
+}
+
+.contact-title {
+  font-size: 70px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+#contact-info {
+  display: flex;
+}
+
+.contact-info1 {
+  flex-basis: 40%;
+  padding: 40px 10%;
+}
+
+.contact-info1 i {
+  color: red;
+  font-size: 30px;
+  margin-bottom: 40px;
+  margin-right: 20px;
+}
+
+.contact-info1 div {
+  font-size: 20px;
+}
+
+.bt1 {
+  text-decoration: none;
+  color: white;
+}
+
+.bt1:hover {
+  color: red;
+}
+
+.bt {
+  text-decoration: none;
+  color: white;
+  padding: 20px 60px;
+  background-color: red;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.contact-info2 {
+  flex-basis: 60%;
+  padding: 40px 10%;
+}
+
+.cv {
+  margin-top: 20px;
+}
+
+form input,
+form textarea {
+  background-color: grey;
+  width: 100%;
+  padding: 15px;
+  margin: 0 0 20px;
+  font-size: 20px;
+  border-radius: 6px;
+  color: white;
+  resize: none;
+}
+
+::placeholder {
+  color: white;
+}
+
+footer {
+  text-align: center;
+  margin: 20px;
+  font-size: 20px;
+}
