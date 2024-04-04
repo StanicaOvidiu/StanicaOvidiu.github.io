@@ -16,12 +16,14 @@
         <div id="title">
           <a href="#"><span class="color-red">O</span>vidiu.</a>
         </div>
-        <ul class="nav-list">
+        <ul id="nav-list">
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
+          <i class="fa-solid fa-x" onclick="closeSide()"></i>
         </ul>
+        <i class="fa-solid fa-bars" onclick="openSide()"></i>
       </nav>
       <div id="introduction">
         Hi, my name is<br />
@@ -51,7 +53,7 @@
         <div id="skills">
           <ul>
             <li>HTML, CSS, JavaScript</li>
-            <li>React</li>
+            <li>ReactJS / Node.JS</li>
             <li>MongoDB</li>
             <li>Figma</li>
             <li>Git</li>
@@ -163,6 +165,7 @@
           </div>
         </div>
         <div class="contact-info2">
+          <h2>Contact Form</h2>
           <form action="mailto:ostefan16@yahoo.com" method="post" enctype="text/plain">
             <input type="text" name="name" placeholder="Your Name" required />
             <input
@@ -184,9 +187,9 @@
         </div>
       </div>
       <footer>
-        Copyright © 2024 Ovidiu-Ștefan Stănică. All rights reserved.
+        Copyright © 2024 Ovidiu-Ștefan Stănică.<span class="reserved">All rights reserved.</span>
       </footer>
     </div>
-    <script src="port.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>

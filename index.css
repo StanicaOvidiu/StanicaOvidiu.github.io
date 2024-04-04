@@ -32,6 +32,10 @@ nav {
   margin: 10px;
 }
 
+nav .fa-solid {
+  display: none;
+}
+
 #title {
   font-size: 60px;
   margin-left: 50px;
@@ -48,20 +52,20 @@ nav {
   color: red;
 }
 
-.nav-list li {
+#nav-list li {
   display: inline-block;
   list-style-type: none;
   margin: 10px 30px;
   font-size: 20px;
 }
 
-.nav-list li a {
+#nav-list li a {
   text-decoration: none;
   color: #fff;
   position: relative;
 }
 
-.nav-list li a::after {
+#nav-list li a::after {
   content: "";
   width: 0;
   height: 3px;
@@ -72,7 +76,7 @@ nav {
   transition: 0.5s;
 }
 
-.nav-list li a:hover::after {
+#nav-list li a:hover::after {
   width: 100%;
 }
 
@@ -300,11 +304,13 @@ nav {
 
 #contact-info {
   display: flex;
+  flex-direction: row;
 }
 
-.contact-info1 {
-  flex-basis: 40%;
-  padding: 40px 10%;
+.contact-info1,
+.contact-info2 {
+  width: 100%;
+  margin: 0 100px;
 }
 
 .contact-info1 i {
@@ -316,6 +322,11 @@ nav {
 
 .contact-info1 div {
   font-size: 20px;
+}
+
+.contact-info2 h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
 }
 
 .bt1 {
@@ -334,11 +345,6 @@ nav {
   background-color: red;
   border-radius: 5px;
   font-size: 20px;
-}
-
-.contact-info2 {
-  flex-basis: 60%;
-  padding: 40px 10%;
 }
 
 .cv {
@@ -363,6 +369,113 @@ form textarea {
 
 footer {
   text-align: center;
-  margin: 20px;
+  margin: 40px 20px 20px;
   font-size: 20px;
+}
+
+.reserved {
+  margin-left: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  header {
+    background-image: url("images/IMG_0156-fotor-bg-remover-2024021015541-transformed.png");
+    background-position: right;
+    background-size: auto;
+  }
+
+  #title {
+    margin-left: 20px;
+    font-size: 40px;
+  }
+
+  #introduction {
+    margin-top: 11em;
+    margin-left: 0.7em;
+    font-size: 25px;
+  }
+
+  nav .fa-solid {
+    display: block;
+  }
+
+  .fa-bars {
+    position: relative;
+    top: 15px;
+    right: 10px;
+  }
+
+  nav ul .fa-solid {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+  }
+
+  nav ul {
+    background: red;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 140px;
+    height: 100%;
+    padding-top: 50px;
+    z-index: 1000;
+    display: none;
+  }
+
+  nav ul li {
+    position: relative;
+    top: 150px;
+  }
+
+  .about-title {
+    text-align: center;
+  }
+
+  .about-description {
+    text-align: center;
+  }
+
+  #tabs-titles {
+    display: flex;
+  }
+
+  #projects {
+    padding: 30px 5%;
+  }
+
+  .layer {
+    padding: 0 20px;
+  }
+
+  .layer p {
+    margin: 0 0 10px;
+    font-size: 15px;
+  }
+
+  .layer a {
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+    padding: 7px;
+  }
+
+  .project:hover .layer {
+    height: 100%;
+  }
+
+  #contact-info {
+    flex-direction: column;
+  }
+
+  .contact-info1,
+  .contact-info2 {
+    margin: 10px;
+  }
+
+  form input,
+  form textarea {
+    width: 90%;
+  }
 }
